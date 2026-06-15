@@ -32,13 +32,17 @@ body{
 
 @media screen and (max-width: 768px) {
 
+    .plan-card {
+        width: 100%;
+    }
+
     .plan-card ul {
         flex-wrap: nowrap;
         justify-content: center;
-        gap: 24px;
+        gap: 6px;
     }
 
-    .plan-card li {
+    .li {
         font-size: 14px;
         white-space: nowrap;
     }
