@@ -29,3 +29,17 @@ body{
     list-style: none;
     color:gray;
 }
+
+@media screen and (max-width: 768px) {
+
+    .plan-card ul {
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .plan-card li {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+}
