@@ -31,19 +31,31 @@ body{
 }
 
 @media screen and (max-width: 768px) {
+    .plan-wrapper {
+        padding: 16px 12px 24px;
+    }
 
     .plan-card {
-        width: 100%;
+        padding: 20px 16px;
+        border-radius: 12px;
     }
 
-    .plan-card ul {
-        flex-wrap: nowrap;
-        justify-content: center;
-        gap: 6px;
+    .plan-card h3 {
+        font-size: 21px;
     }
 
-    .li {
+    .plan-list li {
+        grid-template-columns: 3.75rem minmax(0, 1fr);
+        gap: 8px;
+        padding: 11px 0;
         font-size: 14px;
-        white-space: nowrap;
+        line-height: 1.6;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .plan-list li {
+        grid-template-columns: 1fr;
+        gap: 2px;
     }
 }
