@@ -1,33 +1,68 @@
-body{
+* {
+    box-sizing: border-box;
+}
+
+body {
     margin: 0;
-    height:100vh;
-    background-image:url(#);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position:center;
+    min-height: 100vh;
+    color: #333;
+    background-color: #fff;
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
 }
 
-.plan-wrapper{
-    margin-top:24px;
-    margin-bottom:32px;
-    padding:0 80px;
-    font-weight:normal;
-    background-position:center;
+.plan-wrapper {
     display: flex;
-    align-items:center;
     justify-content: center;
+    width: 100%;
+    padding: 24px clamp(16px, 6vw, 80px) 32px;
 }
 
-.plan-card{
-    border:2px solid #d8d8d8; 
-    border-radius:16px;
-    width:40%;
-    padding:12px 24px;
+.plan-card {
+    width: 100%;
+    max-width: 680px;
+    padding: 24px 32px;
+    border: 2px solid #d8d8d8;
+    border-radius: 16px;
+    background-color: #fff;
 }
 
-.plan-card li{
+.plan-card h1 {
+    margin: 0 0 16px;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.plan-list {
+    margin: 0;
+    padding: 0;
     list-style: none;
-    color:gray;
+}
+
+.plan-list li {
+    display: grid;
+    grid-template-columns: 4.5rem minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    padding: 12px 0;
+    border-bottom: 1px solid #ececec;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.plan-list li:last-child {
+    border-bottom: none;
+}
+
+.plan-list time {
+    color: #333;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.plan-list span {
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 @media screen and (max-width: 768px) {
@@ -40,7 +75,7 @@ body{
         border-radius: 12px;
     }
 
-    .plan-card h3 {
+    .plan-card h1 {
         font-size: 21px;
     }
 
