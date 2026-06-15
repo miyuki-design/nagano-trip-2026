@@ -1,87 +1,105 @@
-body{
-    margin: 0;
-    height:100vh;
-    background-image:url(background.png);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position:center;
+* {
+    box-sizing: border-box;
 }
 
-.header{
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: "Meiryo", "Yu Gothic", sans-serif;
+}
+
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding:24px 80px;
-    border-bottom:white solid 2px;
+    padding: 24px 80px;
+    border-bottom: 2px solid white;
 }
 
-.header-logo{
-    font-weight:bold;
-    font-size:24px;
-    color:white;
+.header-logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    white-space: nowrap;
 }
 
-.header-nav ul{
-    display:flex;
-    gap:64px;
-
-    margin:0;
-    padding:0;
-}
-
-.li{
+.header-nav ul {
+    display: flex;
+    gap: 64px;
+    margin: 0;
+    padding: 0;
     list-style: none;
-    font-size:20px;
-    color:white;
+}
+
+.header-nav a {
+    font-size: 20px;
+    color: white;
     text-decoration: none;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
-.top-wrapper{
+.top-wrapper {
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
+    padding: 15vh 24px 40px;
 }
 
-.top-container{
-    background-color: rgba(255, 255, 255, 0.7);
+.top-container {
+    width: min(600px, 100%);
+    padding: 24px 20px;
+    background-color: rgba(255, 255, 255, 0.72);
     border-radius: 12px;
     text-align: center;
-    width:40%;
-    max-width:600px;
-    margin:15%;
-    line-height:1;
-    color:#a91e72;
-    font-size:larger;
+    color: #a91e72;
 }
 
-.top-container H1{
-    padding-top:16px;
-    font-weight:bold;
+.top-container h1,
+.top-container h3,
+.top-container p {
+    margin: 0;
 }
 
-.top-container{
-    font-weight:normal;
+.top-container h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.3;
+    font-weight: bold;
 }
 
-.top-container p{
-    font-weight:bold;
-    padding-bottom:16px;
+.top-container h3 {
+    margin-top: 12px;
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+.top-container p {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
-
     body {
-        min-height: 100vh;
         background-position: center;
     }
 
     .header {
         flex-direction: column;
-        gap: 20px;
-        padding: 20px 16px;
+        gap: 16px;
+        padding: 18px 16px;
     }
 
     .header-logo {
@@ -93,38 +111,41 @@ body{
     }
 
     .header-nav ul {
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 12px 20px;
+        flex-wrap: wrap;
+        gap: 10px 18px;
     }
 
-    .li {
+    .header-nav a {
         font-size: 14px;
     }
 
     .top-wrapper {
-        width: 90%;
+        width: 100%;
+        padding: 18vh 16px 32px;
     }
 
     .top-container {
         width: 100%;
+        margin: 0;
+        padding: 24px 16px;
     }
 
     .top-container h1 {
-        font-size: 25px;
-        line-height: 1.8;
-        padding-top: 80px;
+        font-size: 28px;
+        line-height: 1.4;
     }
 
     .top-container h3 {
+        margin-top: 10px;
         font-size: 18px;
-        line-height: 1.8;
-        padding-top: 80px;
+        line-height: 1.5;
     }
 
     .top-container p {
-        font-size: 12px;
-        line-height: 1.8;
-        padding-top: 80px;
+        margin-top: 14px;
+        padding: 0;
+        font-size: 13px;
+        line-height: 1.6;
     }
 }
