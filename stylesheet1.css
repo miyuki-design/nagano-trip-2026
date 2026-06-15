@@ -92,14 +92,11 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        background-position: center;
-    }
 
     .header {
         flex-direction: column;
-        gap: 16px;
-        padding: 18px 16px;
+        gap: 12px;
+        padding: 16px;
     }
 
     .header-logo {
@@ -111,24 +108,33 @@ body {
     }
 
     .header-nav ul {
+        flex-wrap: nowrap;
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px 18px;
+        gap: 24px;
     }
 
-    .header-nav a {
+    .li {
         font-size: 14px;
+        white-space: nowrap;
     }
 
     .top-wrapper {
         width: 100%;
-        padding: 18vh 16px 32px;
+        padding: 48px 16px 32px;
     }
 
     .top-container {
-        width: 100%;
+        width: 88%;
+        max-width: 420px;
         margin: 0;
-        padding: 24px 16px;
+        padding: 32px 16px;
+    }
+
+    .top-container h1,
+    .top-container h3,
+    .top-container p {
+        margin: 0;
+        padding: 0;
     }
 
     .top-container h1 {
@@ -137,15 +143,14 @@ body {
     }
 
     .top-container h3 {
-        margin-top: 10px;
-        font-size: 18px;
+        margin-top: 20px;
+        font-size: 19px;
         line-height: 1.5;
     }
 
     .top-container p {
-        margin-top: 14px;
-        padding: 0;
+        margin-top: 18px;
         font-size: 13px;
-        line-height: 1.6;
+        line-height: 1.5;
     }
 }
