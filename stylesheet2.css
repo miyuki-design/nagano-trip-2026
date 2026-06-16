@@ -1,8 +1,8 @@
- *{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     min-height: 100vh;
     color: #333;
@@ -10,59 +10,110 @@ body{
     font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
 }
 
-.main-wrapper{
+.page-content {
+    width: 100%;
+    padding: 24px clamp(16px, 6vw, 80px) 40px;
+}
+
+.main-wrapper,
+.sub-wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 24px clamp(16px, 6vw, 80px) 32px;
 }
 
-.main-card{
-    border:2px solid #d8d8d8; 
-    width:40%;
-    border-radius:16px;
-    padding:12px 24px;
+.sub-wrapper {
+    margin-top: 24px;
+}
+
+.main-card,
+.sub-card {
+    width: min(100%, 680px);
+    border: 2px solid #d8d8d8;
+    border-radius: 16px;
+    padding: 20px 28px;
+    background-color: #fff;
+}
+
+.main-card h3,
+.sub-card h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.main-card h3:not(:first-child) {
+    margin-top: 24px;
 }
 
 .main-card p {
-    text-indent:1em;
-    line-height: 1;
+    margin: 0;
+    padding-left: 1em;
     color: gray;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
 }
 
-.sub-wrapper{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 24px clamp(16px, 6vw, 80px) 32px;
+.sub-card ul {
+    margin: 0;
+    padding-left: 2em;
 }
 
-.sub-card{
-    border:2px solid #d8d8d8; 
-    border-radius:16px;
-    width:40%;
-    padding:12px 24px;
+.sub-card li {
+    color: gray;
+    line-height: 1.9;
 }
 
-.sub-card li{
-    color:gray;
-    list-style: normal;
-}
-
+/* スマホ・小さめタブレット */
 @media screen and (max-width: 768px) {
+    .page-content {
+        padding: 16px 12px 28px;
+    }
 
-    .plan-card {
+    .sub-wrapper {
+        margin-top: 16px;
+    }
+
+    .main-card,
+    .sub-card {
         width: 100%;
+        border-radius: 12px;
+        padding: 18px 16px;
     }
 
-    .plan-card ul {
-        flex-wrap: nowrap;
-        justify-content: center;
-        gap: 6px;
+    .main-card h3,
+    .sub-card h3 {
+        font-size: 18px;
     }
 
-    .li {
+    .main-card h3:not(:first-child) {
+        margin-top: 20px;
+    }
+
+    .main-card p,
+    .sub-card li {
+        font-size: 15px;
+    }
+
+    .main-card p {
+        padding-left: 0.5em;
+    }
+}
+
+/* 幅がかなり狭いスマホ */
+@media screen and (max-width: 380px) {
+    .page-content {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .main-card,
+    .sub-card {
+        padding: 16px 14px;
+    }
+
+    .main-card p,
+    .sub-card li {
         font-size: 14px;
-        white-space: nowrap;
     }
 }
