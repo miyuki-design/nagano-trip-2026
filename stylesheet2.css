@@ -1,20 +1,20 @@
+ *{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
-    height:100vh;
-    background-image:url(#);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position:center;
+    min-height: 100vh;
+    color: #333;
+    background-color: #fff;
+    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
 }
 
 .main-wrapper{
-    margin-top:32px;
-    padding:0 80px;
-    font-weight:normal;
-    background-position:center;
     display: flex;
-    align-items:center;
     justify-content: center;
+    width: 100%;
+    padding: 24px clamp(16px, 6vw, 80px) 32px;
 }
 
 .main-card{
@@ -31,14 +31,10 @@ body{
 }
 
 .sub-wrapper{
-    margin-top:24px;
-    margin-bottom:24px;
-    padding:0 80px;
-    font-weight:normal;
-    background-position:center;
     display: flex;
-    align-items:center;
     justify-content: center;
+    width: 100%;
+    padding: 24px clamp(16px, 6vw, 80px) 32px;
 }
 
 .sub-card{
